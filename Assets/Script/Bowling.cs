@@ -37,4 +37,10 @@ public class Bowling : MonoBehaviour
     {
         transform.position -= new Vector3(1f, 0f, 0f) * Time.deltaTime;
     }
+
+    public void StopBall()
+    {
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
 }
