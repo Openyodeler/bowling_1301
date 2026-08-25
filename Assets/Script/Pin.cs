@@ -11,7 +11,7 @@ public class Pin : MonoBehaviour
         if (!hasFallen && Vector3.Angle(transform.up, Vector3.up) > 45f)
         {
             hasFallen = true;
-
+            GameManager.instance.addpoint(point);
             // Add point
             Debug.Log("Pin fell! +1 point");
         }
@@ -26,6 +26,10 @@ public class Pin : MonoBehaviour
     {
         if (other.CompareTag("PinZone"))
         {
+            if (!hasFallen) 
+            {
+                GameManager.instance.addpoint(point);
+            }
             hasFallen = true;
         }
     }
