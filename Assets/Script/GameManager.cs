@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ThreeRoundScore threeRound;
 
     [SerializeField] private TMP_Text total;
+
+    [SerializeField] private Button button;
     private int bonus;
     public bool ended = false;
 
@@ -276,6 +278,8 @@ public class GameManager : MonoBehaviour
     {
         ended = true;
         ShowallScore();
+        button.Setactive();
+        button.ShowScore(TotalScore);
         return;
     }
 
