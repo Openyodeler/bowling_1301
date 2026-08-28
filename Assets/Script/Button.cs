@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-    public void Start()
+    public void start()
     {
         SceneManager.LoadScene("SampleScene");
     }
